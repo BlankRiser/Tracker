@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% if title %}
+    <title> {{ title }} </title>
+    {% else %}
+    <title>Example</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='infoblocks.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}">
+</head>
+
+<body>
+
+    
+
+    <div class="container home-menu pure-menu pure-menu-horizontal pure-menu-fixed gray highlightTextIn">
+        <a class="pure-menu-heading" href="">Tracker</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item "><a href="/" class="pure-menu-link" alt="Home">Home</a></li>
+            <li class="pure-menu-item"><a href="/projects" class="pure-menu-link" alt="Projects">Schedule</a></li>
+        </ul>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <canvas id="canvas">
+        <div
+        style="
+        width: 100px;
+        height: 30px;
+        color:aliceblue;
+        z-index : 0;
+        ">
+        </div>
+    </canvas>
+<script src="{{url_for('static',filename='animated_background.js')}}"></script>
+<script src="{{url_for('static',filename='blocks.js')}}"></script>
+</body>
+
+</html>

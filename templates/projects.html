@@ -1,0 +1,104 @@
+{% extends "layout.html" %} 
+{% block content %}
+
+
+<table>
+  <th>Sunday</th>
+  <td>
+    {% for day in sunday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+  
+      {% endfor %} 
+  </td>
+  <td>
+    {% for day in monday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+      {% endfor %} 
+  </td>
+  <td>
+    {% for day in tuesday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+  
+      {% endfor %} 
+  </td>
+
+  <td>
+    {% for day in wednesday %}
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+      {% endfor %} 
+  </td>
+  <td>
+    {% for day in thursday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+  
+      {% endfor %} 
+  </td>
+  <td>
+    {% for day in friday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+  
+      {% endfor %} 
+  </td>
+  <td>
+    {% for day in saturday %}
+
+    <div class="information">
+      <h3>{{day.title}}</h3>
+      <a href="{{day.MAL_Url}}">
+        <img class="animeImg" src="{{day.image_url}}" alt="">
+      </a>
+      <p class="synopsis" >{{day.synopsis}}</p>
+    </div>
+  
+      {% endfor %} 
+  </td>
+
+</table>
+
+
+
+
+  
+
+{% endblock content %}
