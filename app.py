@@ -112,9 +112,21 @@ def projectPage():
 #title = 'Projects',
 
 
+@app.route('/test')
+def testing():
+   return render_template('test.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday)
+#title = 'Projects',
+
+@app.route('/test2')
+def testing2():
+   return render_template('test2.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday)
+#title = 'Projects',
+
+
 
 @app.route('/<errors>')
 def errorPage(errors):
+	#return (errors + ' not found')
     return render_template('errors.html')   
 
 if __name__ == '__main__':

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="../static/bootstrap.min.css" />
+
+<div class="container">
+    
+  <h3>monday</h3>
+  
+    <div class="row" style="background-color: antiquewhite;">
+    {% for day in monday %}
+    <div class="col-sm-4">
+      <div class="card " style="width:auto; max-height: auto; padding: 2%;">
+        <img
+          class="card-img-top rounded rounded mx-auto d-block"
+          src="{{day.image_url}}"
+          alt="Card image"
+          style="width:60%;"
+        />
+        <div class="card-body overflow-auto float-right">
+          <h4 class="card-title">{{day.title}}</h4>
+          <div class="overflow-auto" style="max-height: 220px;">
+            <p class="card-text ">{{ day.synopsis }}</p>
+          </div>
+          <br />
+          <a href="{{day.MAL_Url}}" class="btn btn-primary">MAL</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+
+</div>
