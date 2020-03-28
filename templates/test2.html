@@ -15,179 +15,180 @@
 
   <h2>Sunday</h2>
   <div class="container-fluid">
-      <div class="row">
+    <div class="row">
       {% for day in sunday %}
       <div class="col-12 mt-3">
-          <div class="card">
-          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-              <div class="img-square-wrapper">
-              <img
-                  class="rounded float-left"
-                  src="{{day.image_url}}"
-                  alt="Card image cap"
-              />
-              </div>
-              <div class="card-body">
-              <h4 class="card-title">{{day.title}}</h4>
-              <p class="card-text overflow-auto">{{day.synopsis}}</p>
-              </div>
-          </div>
-          </div>
-      </div>
-      {% endfor %}
-      </div>
-  </div>
-
-    <h2
-    style="text-align: center; color: blueviolet;background-color: burlywood;"
-    >Monday</h2>
-    <div class="container-fluid">
-    <div class="row">
-        {% for day in monday %}
-        <div class="col-12 mt-3">
         <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
             <div class="img-square-wrapper">
-                <img
+              <img
                 class="rounded float-left"
                 src="{{day.image_url}}"
                 alt="Card image cap"
-                />
+              />
             </div>
             <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-        {% endfor %}
+      </div>
+      {% endfor %}
     </div>
-    </div>
+  </div>
 
-    <h2>Tuesday</h2>
-    <div class="container-fluid">
-        <div class="row">
-        {% for day in tuesday %}
-        <div class="col-12 mt-3">
-            <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                <div class="img-square-wrapper">
-                <img
-                    class="rounded float-left"
-                    src="{{day.image_url}}"
-                    alt="Card image cap"
-                />
-                </div>
-                <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
-                </div>
+  <h2
+    style="text-align: center; color: blueviolet;background-color: burlywood;"
+  >
+    Monday
+  </h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in monday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
             </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
+          </div>
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <h2>Wednesday</h2>
-    <div class="container-fluid">
-        <div class="row">
-        {% for day in wednesday %}
-        <div class="col-12 mt-3">
-            <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                <div class="img-square-wrapper">
-                <img
-                    class="rounded float-left"
-                    src="{{day.image_url}}"
-                    alt="Card image cap"
-                />
-                </div>
-                <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
-                </div>
+  <h2>Tuesday</h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in tuesday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
             </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
+          </div>
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <h2>Thursday</h2>
-    <div class="container-fluid">
-        <div class="row">
-        {% for day in thusday %}
-        <div class="col-12 mt-3">
-            <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                <div class="img-square-wrapper">
-                <img
-                    class="rounded float-left"
-                    src="{{day.image_url}}"
-                    alt="Card image cap"
-                />
-                </div>
-                <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
-                </div>
+  <h2>Wednesday</h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in wednesday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
             </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
+          </div>
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <h2>Friday</h2>
-    <div class="container-fluid">
-        <div class="row">
-        {% for day in friday %}
-        <div class="col-12 mt-3">
-            <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                <div class="img-square-wrapper">
-                <img
-                    class="rounded float-left"
-                    src="{{day.image_url}}"
-                    alt="Card image cap"
-                />
-                </div>
-                <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
-                </div>
+  <h2>Thursday</h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in thursday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
             </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
+          </div>
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <h2>Saturday</h2>
-    <div class="container-fluid">
-        <div class="row">
-        {% for day in saturday %}
-        <div class="col-12 mt-3">
-            <div class="card">
-            <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-                <div class="img-square-wrapper">
-                <img
-                    class="rounded float-left"
-                    src="{{day.image_url}}"
-                    alt="Card image cap"
-                />
-                </div>
-                <div class="card-body">
-                <h4 class="card-title">{{day.title}}</h4>
-                <p class="card-text overflow-auto">{{day.synopsis}}</p>
-                </div>
+  <h2>Friday</h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in friday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
             </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
             </div>
+          </div>
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
+  <h2>Saturday</h2>
+  <div class="container-fluid">
+    <div class="row">
+      {% for day in saturday %}
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+            <div class="img-square-wrapper">
+              <img
+                class="rounded float-left"
+                src="{{day.image_url}}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{day.title}}</h4>
+              <p class="card-text overflow-auto">{{day.synopsis}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

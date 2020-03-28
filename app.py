@@ -6,7 +6,6 @@ obj = Jikan()
 app = Flask(__name__)
 
 schedules = obj.schedule()
-
   
 def animeSchedule(day):
   tempDay = []
@@ -36,7 +35,7 @@ saturday = animeSchedule('saturday')
 @app.route('/home')
 @app.route('/')
 def homePage():
-    return render_template('index.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday) 
+    return render_template('index.html') 
     # here posts is user defined variable that is used in index html to iterate over the data in 'someData'
 
 @app.route('/projects')
