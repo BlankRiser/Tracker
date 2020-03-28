@@ -7,94 +7,27 @@ app = Flask(__name__)
 
 schedules = obj.schedule()
 
-Details= []
-# genre = []
-type(Details)
-
-# Uncomment this for genre
-# for i in range(0,len(schedules['friday'])):  
-#   for j in range(0, len(schedules['friday'][i]['genres'])):
-#     genre.append(schedules['friday'][i]['genres'][j]['name'])
-
-#day = input('Schedule of which day : ')
-
-days =['sunday','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
-sunday = []
-monday = []
-tuesday = []
-wednesday = []
-thursday = []
-friday = []
-saturday = []
   
-
-for day in days:
+def animeSchedule(day):
+  tempDay = []
   for i in range(0,len(schedules[day])):
-    if day == 'monday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      monday.append(Detail)
-    if day == 'tuesday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      tuesday.append(Detail)
-    if day == 'wednesday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      wednesday.append(Detail)
-    if day == 'thursday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      thursday.append(Detail)
-    if day == 'friday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      friday.append(Detail)
-    if day == 'saturday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      saturday.append(Detail)
-    if day == 'sunday':
-      Detail = {
-        'image_url' : schedules[day][i]['image_url'],
-        'title' : schedules[day][i]['title'],
-        'MAL_Url': schedules[day][i]['url'],
-        'synopsis': schedules[day][i]['synopsis'],
-        # 'genre': genre
-        }
-      sunday.append(Detail)
+    Detail = {
+      'image_url' : schedules[day][i]['image_url'],
+      'title' : schedules[day][i]['title'],
+      'MAL_Url': schedules[day][i]['url'],
+      'synopsis': schedules[day][i]['synopsis'],
+      # 'genre': genre
+      }
+    tempDay.append(Detail)
+  return tempDay
 
-print(Details)
+sunday = animeSchedule('sunday')
+monday = animeSchedule('monday')
+tuesday = animeSchedule('tuesday')
+wednesday = animeSchedule('wednesday')
+thursday = animeSchedule('thursday')
+friday = animeSchedule('friday')
+saturday = animeSchedule('saturday')
 
 # posts should be of this form [{},{}]
 
