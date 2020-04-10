@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jikan - Unofficial MyAnimeList API</title>
+
+    <!-- SEO/OGP -->
+    <meta name="author" content="Ram Shankar Choudhary">
+
+    <!-- Favicon -->
+
+    <meta name="msapplication-TileColor" content="#2e51a2">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/search.css">
+
+    <!-- <link rel="stylesheet/less" type="text/css" href="assets/less/bootstrap.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script> -->
+    <style data-styled="" data-styled-version="4.2.0"></style></head>
+<body>
+
+
+
+    <header>
+
+
+
+
+        <div class="hero">
+            <div class="left">
+                <h1>Jikan API</h1>
+                <h5 class="typography typography--uppercase">Unofficial MyAnimeList API</h5>
+                <p>
+                    Jikan (時間) is an open-source PHP &amp; REST API for the <b><em>“most active online anime + manga community and database”</em> — MyAnimeList</b>. It parses the website to satisfy the need for an API.
+                </p>
+
+                <div class="buttons">
+                    <a href="#open-source" class="button button--size-large button--outline-white">
+                        Learn More
+                    </a>
+                    <a target="_blank" href="https://jikan.docs.apiary.io/" class="button button--size-large button--fill-white">
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="available-wrappers">
+                    <a href="#wrappers">
+                        View list of wrappers 🠂
+                        <br>
+                        <small>.NET, Python, Ruby, JS, Java, PHP, NodeJS, Dart, &amp; more!</small>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="right">
+                <div class="app">
+                    <div class="search">
+                        <input id="search_query" type="text" name="query" placeholder="search for an anime, e.g Naruto">
+                        <button id="search">Go</button>
+                    </div>
+                    <div class="debug">
+                        Requesting: 
+                        <a target="_blank" id="search_query_url" href="https://api.jikan.moe/v3/search/anime?q=hunter&amp;limit=16">https://api.jikan.moe/v3/search/anime?q=hunter&amp;limit=16
+                        </a>
+                    </div>
+                    <div id="search_results" class="cards">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+    
+    <section class="patreon">
+        <div>
+            <div style="line-height: 0;"><iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fjikan.moe%2F&amp;creatorID=11383567" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible;"></iframe></div><script async="" src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+        </div>
+
+        <div>
+            Please consider supporting us on Patreon to help run and expand the service!
+        </div>
+    </section>
+
+    <script src="../static/scripts/search.js"></script>
+
+</small>
+
+</body>
+</html>

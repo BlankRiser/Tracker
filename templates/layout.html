@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='infoblocks.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/background.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/infoblocks.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/background.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap.min.css')}}">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         <a class="pure-menu-heading" href="">Tracker</a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item "><a href="/" class="pure-menu-link" alt="Home">Home</a></li>
-            <li class="pure-menu-item"><a href="/projects" class="pure-menu-link" alt="Projects">Schedule</a></li>
+            <li class="pure-menu-item"><a href="/test2" class="pure-menu-link" alt="Projects">Projects</a></li>
         </ul>
     </div>
 
@@ -52,8 +52,8 @@
         ">
         </div>
     </canvas>
-<script src="{{url_for('static',filename='animated_background.js')}}"></script>
-<script src="{{url_for('static',filename='blocks.js')}}"></script>
+<script src="{{url_for('static',filename='scripts/animated_background.js')}}"></script>
+<script src="{{url_for('static',filename='scripts/blocks.js')}}"></script>
 </body>
 
 </html>

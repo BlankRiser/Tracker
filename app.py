@@ -1,65 +1,44 @@
-from flask import Flask, render_template, url_for
-from jikanpy import Jikan
+from flask import Flask, render_template, url_for, request
+import testJikan
 
-obj = Jikan()
+app = Flask(
+  __name__,
+  static_folder='static',
+  template_folder ='templates'
+)
 
-app = Flask(__name__)
+sunday = testJikan.animeSchedule('sunday')
+monday = testJikan.animeSchedule('monday')
+tuesday = testJikan.animeSchedule('tuesday')
+wednesday = testJikan.animeSchedule('wednesday')
+thursday = testJikan.animeSchedule('thursday')
+friday = testJikan.animeSchedule('friday')
+saturday = testJikan.animeSchedule('saturday')
 
-schedules = obj.schedule()
-  
-def animeSchedule(day):
-  tempDay = []
-  for i in range(0,len(schedules[day])):
-    Detail = {
-      'image_url' : schedules[day][i]['image_url'],
-      'title' : schedules[day][i]['title'],
-      'MAL_Url': schedules[day][i]['url'],
-      'synopsis': schedules[day][i]['synopsis'],
-      # 'genre': genre
-      }
-    tempDay.append(Detail)
-  return tempDay
 
-sunday = animeSchedule('sunday')
-monday = animeSchedule('monday')
-tuesday = animeSchedule('tuesday')
-wednesday = animeSchedule('wednesday')
-thursday = animeSchedule('thursday')
-friday = animeSchedule('friday')
-saturday = animeSchedule('saturday')
-
-# posts should be of this form [{},{}]
-
-#print(Details)
-
-@app.route('/home')
-@app.route('/')
+@app.route('/home', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET'])
 def homePage():
-    return render_template('index.html') 
-    # here posts is user defined variable that is used in index html to iterate over the data in 'someData'
+    return render_template( 'index.html') 
 
-@app.route('/projects')
-def projectPage():
-   return render_template('projects.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday)
-#title = 'Projects',
+@app.route('/search', methods=['POST','GET'])
+def searchPage():
+    return render_template( 'search.html') 
 
 
-@app.route('/test')
-def testing():
-   return render_template('test.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday)
-#title = 'Projects',
 
-@app.route('/test2')
+@app.route('/schedule')
 def testing2():
-   return render_template('test2.html', monday = monday, tuesday = tuesday, wednesday = wednesday, thursday = thursday, friday = friday, saturday = saturday, sunday = sunday)
-#title = 'Projects',
-
+  return render_template(
+    'schedule.html', monday = monday, tuesday = tuesday, wednesday = wednesday, 
+    thursday = thursday, friday = friday, saturday = saturday, sunday = sunday
+  )
 
 
 @app.route('/<errors>')
 def errorPage(errors):
 	#return (errors + ' not found')
-    return render_template('errors.html')   
+    return render_template('errors.html',errors = errors)   
 
 if __name__ == '__main__':
     # app.debug = True
